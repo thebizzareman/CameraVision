@@ -1,0 +1,1069 @@
+{
+  "version": 1,
+  "updated": "2026-07-07",
+  "comment": "Gesture knowledge database. detector.kind: 'code' (implemented in gestures.py/faces.py, cataloged here), 'spec' (single/two-hand handshape detected from data by gesture_db.py), 'face_spec' (facial expression from blendshape thresholds), 'sequence' (word sign: temporal handshape+location+movement phases, signword.py). Optional 'language' tag (ASL|TID|universal) filters word signs. research.py --auto grows this from the web via prose2spec.py. display: card | hand_label | face_label. display_name gives the on-screen label (e.g. Turkish diacritics).",
+  "entries": [
+    {
+      "id": "open-palm",
+      "name": "Open Palm",
+      "type": "single_hand",
+      "origin": "builtin",
+      "culture": "universal",
+      "description": "All four fingers extended.",
+      "display": "hand_label",
+      "status": "active",
+      "detector": {
+        "kind": "code",
+        "code_ref": "gestures.Hand._classify",
+        "signature": {
+          "thumb": "any",
+          "index": "ext",
+          "middle": "ext",
+          "ring": "ext",
+          "pinky": "ext"
+        }
+      },
+      "sources": [
+        {
+          "ref": "el_hareketleri_kilavuzu.md"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/List_of_gestures",
+          "retrieved": "2026-07-06",
+          "note": "synonym: Benediction"
+        }
+      ],
+      "synonyms": [
+        "Benediction"
+      ]
+    },
+    {
+      "id": "fist",
+      "name": "Fist",
+      "type": "single_hand",
+      "origin": "builtin",
+      "culture": "universal",
+      "description": "All fingers curled into the palm.",
+      "display": "hand_label",
+      "status": "active",
+      "detector": {
+        "kind": "code",
+        "code_ref": "gestures.Hand._classify",
+        "signature": {
+          "thumb": "curl",
+          "index": "curl",
+          "middle": "curl",
+          "ring": "curl",
+          "pinky": "curl"
+        }
+      },
+      "sources": [
+        {
+          "ref": "el_hareketleri_kilavuzu.md"
+        }
+      ]
+    },
+    {
+      "id": "thumbs-up",
+      "name": "Thumbs Up",
+      "type": "single_hand",
+      "origin": "builtin",
+      "culture": "universal",
+      "description": "Fist with thumb extended vertically upward (kilavuzu 2.3).",
+      "display": "card",
+      "status": "active",
+      "detector": {
+        "kind": "code",
+        "code_ref": "gestures.Hand._classify",
+        "signature": {
+          "thumb": "ext",
+          "index": "curl",
+          "middle": "curl",
+          "ring": "curl",
+          "pinky": "curl"
+        }
+      },
+      "sources": [
+        {
+          "ref": "el_hareketleri_kilavuzu.md#2.3"
+        }
+      ]
+    },
+    {
+      "id": "peace",
+      "name": "Peace",
+      "type": "single_hand",
+      "origin": "builtin",
+      "culture": "universal",
+      "description": "V sign: index and middle extended, 30-45 degree spread (kilavuzu 2.2).",
+      "display": "card",
+      "status": "active",
+      "synonyms": [
+        "V Sign",
+        "Victory",
+        "Two-finger salute"
+      ],
+      "detector": {
+        "kind": "code",
+        "code_ref": "gestures.Hand._classify",
+        "signature": {
+          "thumb": "any",
+          "index": "ext",
+          "middle": "ext",
+          "ring": "curl",
+          "pinky": "curl"
+        }
+      },
+      "sources": [
+        {
+          "ref": "el_hareketleri_kilavuzu.md#2.2"
+        }
+      ]
+    },
+    {
+      "id": "pointing",
+      "name": "Pointing",
+      "type": "single_hand",
+      "origin": "builtin",
+      "culture": "universal",
+      "description": "Index finger extended, others curled.",
+      "display": "card",
+      "status": "active",
+      "detector": {
+        "kind": "code",
+        "code_ref": "gestures.Hand._classify",
+        "signature": {
+          "thumb": "any",
+          "index": "ext",
+          "middle": "curl",
+          "ring": "curl",
+          "pinky": "curl"
+        }
+      },
+      "sources": [
+        {
+          "ref": "el_hareketleri_kilavuzu.md"
+        }
+      ]
+    },
+    {
+      "id": "ok-sign",
+      "name": "OK",
+      "type": "single_hand",
+      "origin": "builtin",
+      "culture": "universal",
+      "description": "Thumb-index loop, other three fingers up (kilavuzu 2.4). Conflict rules R3/R5.",
+      "display": "card",
+      "status": "active",
+      "detector": {
+        "kind": "code",
+        "code_ref": "gestures.Hand._classify",
+        "signature": null
+      },
+      "sources": [
+        {
+          "ref": "el_hareketleri_kilavuzu.md#2.4"
+        }
+      ]
+    },
+    {
+      "id": "rock",
+      "name": "Rock",
+      "type": "single_hand",
+      "origin": "builtin",
+      "culture": "metal subculture / Turkish nationalism (Grey Wolf variant)",
+      "description": "Sign of the horns: index and pinky extended, middle and ring folded (kilavuzu 2.5).",
+      "display": "hand_label",
+      "status": "active",
+      "synonyms": [
+        "Sign of the Horns",
+        "Grey Wolf salute",
+        "Horn"
+      ],
+      "detector": {
+        "kind": "code",
+        "code_ref": "gestures.Hand._classify",
+        "signature": {
+          "thumb": "any",
+          "index": "ext",
+          "middle": "curl",
+          "ring": "curl",
+          "pinky": "ext"
+        }
+      },
+      "sources": [
+        {
+          "ref": "el_hareketleri_kilavuzu.md#2.5"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/List_of_gestures",
+          "note": "Grey Wolf salute has the same topology"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/List_of_gestures",
+          "retrieved": "2026-07-06",
+          "note": "synonym: Horn"
+        }
+      ]
+    },
+    {
+      "id": "middle-finger",
+      "name": "Middle Finger",
+      "type": "single_hand",
+      "origin": "builtin",
+      "culture": "universal (offensive)",
+      "description": "Middle finger extended vertically, rest folded (kilavuzu 2.1). Rules R4, R6.",
+      "display": "card",
+      "status": "active",
+      "detector": {
+        "kind": "code",
+        "code_ref": "gestures.Hand._classify",
+        "signature": {
+          "thumb": "curl",
+          "index": "curl",
+          "middle": "ext",
+          "ring": "curl",
+          "pinky": "curl"
+        }
+      },
+      "sources": [
+        {
+          "ref": "el_hareketleri_kilavuzu.md#2.1"
+        }
+      ]
+    },
+    {
+      "id": "nah",
+      "name": "Nah",
+      "type": "single_hand",
+      "origin": "builtin",
+      "culture": "Turkish (offensive)",
+      "description": "Fig sign: fist with thumb protruding between index and middle knuckles (kilavuzu 1.2). Rule R3.",
+      "display": "card",
+      "status": "active",
+      "synonyms": [
+        "Fig sign"
+      ],
+      "detector": {
+        "kind": "code",
+        "code_ref": "gestures.Hand._classify",
+        "signature": null
+      },
+      "sources": [
+        {
+          "ref": "el_hareketleri_kilavuzu.md#1.2"
+        }
+      ]
+    },
+    {
+      "id": "kapak",
+      "name": "KAPAK",
+      "type": "two_hand",
+      "origin": "builtin",
+      "culture": "Turkish (argo)",
+      "description": "Open palm placed on top of a fist - the 'lid' (kilavuzu 1.1). Rule R1.",
+      "display": "card",
+      "status": "active",
+      "detector": {
+        "kind": "code",
+        "code_ref": "gestures._kapak",
+        "signature": null
+      },
+      "sources": [
+        {
+          "ref": "el_hareketleri_kilavuzu.md#1.1"
+        }
+      ]
+    },
+    {
+      "id": "hesap-lutfen",
+      "name": "HESAP LUTFEN",
+      "type": "dynamic",
+      "origin": "builtin",
+      "culture": "Turkish (commercial)",
+      "description": "Money-rub: thumb oscillates over index/middle tips (kilavuzu 1.4). Rule R5.",
+      "display": "card",
+      "status": "active",
+      "detector": {
+        "kind": "code",
+        "code_ref": "gestures.GestureRecognizer._money_rub",
+        "signature": null
+      },
+      "sources": [
+        {
+          "ref": "el_hareketleri_kilavuzu.md#1.4"
+        }
+      ],
+      "display_name": "HESAP LÜTFEN"
+    },
+    {
+      "id": "eyvallah",
+      "name": "EYVALLAH",
+      "type": "face_hand",
+      "origin": "builtin",
+      "culture": "Turkish (respect)",
+      "description": "Open palm on the chest below the face (kilavuzu 1.3). Rules R1/R2/R6.",
+      "display": "card",
+      "status": "active",
+      "detector": {
+        "kind": "code",
+        "code_ref": "gestures._eyvallah",
+        "signature": null
+      },
+      "sources": [
+        {
+          "ref": "el_hareketleri_kilavuzu.md#1.3"
+        }
+      ]
+    },
+    {
+      "id": "yemezler",
+      "name": "YEMEZLER",
+      "type": "face_hand",
+      "origin": "builtin",
+      "culture": "Turkish (skepticism)",
+      "description": "Index fingertip pulls the lower eyelid (kilavuzu 1.5). Rules R1/R2.",
+      "display": "card",
+      "status": "active",
+      "detector": {
+        "kind": "code",
+        "code_ref": "gestures._yemezler",
+        "signature": null
+      },
+      "sources": [
+        {
+          "ref": "el_hareketleri_kilavuzu.md#1.5"
+        }
+      ]
+    },
+    {
+      "id": "expressions",
+      "name": "_expressions",
+      "type": "expression_group",
+      "origin": "builtin",
+      "description": "Eyebrows Raised, Frown, Smile, Mouth Open, Tongue Out, Kiss, Wink - blendshape rules.",
+      "display": "face_label",
+      "status": "active",
+      "detector": {
+        "kind": "code",
+        "code_ref": "faces.EXPRESSION_RULES",
+        "signature": null
+      },
+      "sources": [
+        {
+          "ref": "RULEBOOK.md#R7-R9"
+        }
+      ]
+    },
+    {
+      "id": "emotions",
+      "name": "_emotions",
+      "type": "emotion_group",
+      "origin": "builtin",
+      "description": "Happy, Fake Smile, Surprised, Scared, Angry, Concentration, Suspicious, Contempt, Suppressed Laugh - FACS scorers.",
+      "display": "face_label",
+      "status": "active",
+      "detector": {
+        "kind": "code",
+        "code_ref": "faces.EMOTION_RULES",
+        "signature": null
+      },
+      "sources": [
+        {
+          "ref": "facial_gestures_analysis.md"
+        },
+        {
+          "ref": "RULEBOOK.md#R10-R13"
+        }
+      ]
+    },
+    {
+      "id": "prayer-hands",
+      "name": "Prayer Hands",
+      "type": "two_hand",
+      "origin": "builtin",
+      "culture": "universal (namaste / gratitude)",
+      "description": "Both open hands pressed together in front of the body. First data-driven two-hand gesture (relation: touching).",
+      "display": "card",
+      "status": "active",
+      "synonyms": [
+        "Namaste",
+        "Anjali Mudra"
+      ],
+      "detector": {
+        "kind": "spec",
+        "hand_a": {
+          "index": "ext",
+          "middle": "ext",
+          "ring": "ext",
+          "pinky": "ext"
+        },
+        "hand_b": {
+          "index": "ext",
+          "middle": "ext",
+          "ring": "ext",
+          "pinky": "ext"
+        },
+        "relation": "touching",
+        "max_dist": 0.9
+      },
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/A%C3%B1jali_Mudr%C4%81"
+        }
+      ]
+    },
+    {
+      "id": "wave",
+      "name": "Wave",
+      "type": "dynamic",
+      "origin": "builtin",
+      "culture": "universal (greeting)",
+      "description": "Open hand rocking side to side - oscillation of the hand center with 3+ direction reversals.",
+      "display": "card",
+      "status": "active",
+      "detector": {
+        "kind": "code",
+        "code_ref": "gestures.GestureRecognizer._waving",
+        "signature": null
+      },
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/Wave_(gesture)"
+        }
+      ]
+    },
+    {
+      "id": "asl-fingerspelling",
+      "name": "_asl_fingerspelling",
+      "type": "sign_language_group",
+      "origin": "builtin",
+      "culture": "American Sign Language (manual alphabet)",
+      "description": "24 static ASL letters (A-Y; J and Z are dynamic and excluded), classified from continuous per-joint curl analytics in sign mode (L key). Rule R14.",
+      "display": "hand_label",
+      "status": "active",
+      "detector": {
+        "kind": "code",
+        "code_ref": "signs.classify",
+        "signature": null
+      },
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/American_manual_alphabet"
+        },
+        {
+          "ref": "RULEBOOK.md#R14"
+        }
+      ]
+    },
+    {
+      "id": "shaka",
+      "name": "Shaka",
+      "type": "single_hand",
+      "origin": "research",
+      "description": "bers of various Scouting organizations. Shaka sign consists of extending the thumb and little finger upward. It is used as a gesture of friendship in Hawaii and surf culture. Shrug with only one hand (rotating of wrist and opening hand palm upward) is used to",
+      "display": "card",
+      "status": "active",
+      "detector": {
+        "kind": "spec",
+        "fingers": {
+          "thumb": "ext",
+          "index": "curl",
+          "middle": "curl",
+          "ring": "curl",
+          "pinky": "ext"
+        }
+      },
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/List_of_gestures",
+          "retrieved": "2026-07-05"
+        }
+      ],
+      "notes": "Hawaii/surf friendship sign"
+    },
+    {
+      "id": "finger-gun",
+      "name": "Finger Gun",
+      "type": "single_hand",
+      "origin": "research",
+      "description": "ossible number (10, 20, 27, 9999). The finger gun gesture Finger gun is a hand gesture in which the subject uses their hand to mimic a handgun. If pointed to oneself (with or without the \"hammer falling\" of th",
+      "display": "card",
+      "status": "active",
+      "detector": {
+        "kind": "spec",
+        "fingers": {
+          "thumb": "ext",
+          "index": "ext",
+          "middle": "curl",
+          "ring": "curl",
+          "pinky": "curl"
+        },
+        "overrides": [
+          "Pointing"
+        ]
+      },
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/List_of_gestures",
+          "retrieved": "2026-07-05"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/List_of_gestures",
+          "retrieved": "2026-07-06",
+          "note": "synonym: Finger heart"
+        }
+      ],
+      "notes": "thumb up + index out; builtin Pointing ignores the thumb",
+      "synonyms": [
+        "Finger heart"
+      ]
+    },
+    {
+      "id": "three-finger-salute",
+      "name": "Three-Finger Salute",
+      "type": "single_hand",
+      "origin": "research",
+      "description": "to let another traveller pass. Serbian three-finger salute is a salute used by ethnic Serbs, made by extending the thumb, index, and middle fingers. The Scout's salute is a three-finger salute and sign used by members of the international Scout movement. It is made with the right hand, palm faced o",
+      "display": "card",
+      "status": "active",
+      "detector": {
+        "kind": "spec",
+        "fingers": {
+          "thumb": "ext",
+          "index": "ext",
+          "middle": "ext",
+          "ring": "curl",
+          "pinky": "curl"
+        },
+        "overrides": [
+          "Peace"
+        ]
+      },
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/List_of_gestures",
+          "retrieved": "2026-07-05"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/List_of_gestures",
+          "retrieved": "2026-07-06",
+          "note": "synonym: Serbian three-finger"
+        }
+      ],
+      "notes": "Serbian salute; builtin Peace ignores the thumb",
+      "synonyms": [
+        "Serbian three-finger"
+      ]
+    },
+    {
+      "id": "salute",
+      "name": "Salute",
+      "type": "face_hand",
+      "origin": "research",
+      "description": "mb holding down the little finger. As a salute, the fingertips touch the brow of the head. As a sign the hand is held at shoulder height. The term \"three-finger salute\" is also applied in a joking way to the finger. Thumbs Up and Thumbs",
+      "display": "card",
+      "status": "active",
+      "detector": {
+        "kind": "spec",
+        "fingers": {
+          "thumb": "any",
+          "index": "ext",
+          "middle": "ext",
+          "ring": "ext",
+          "pinky": "any"
+        },
+        "face_relation": {
+          "region": "forehead",
+          "max_dist": 1.3
+        }
+      },
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/List_of_gestures",
+          "retrieved": "2026-07-05"
+        }
+      ],
+      "notes": "flat hand raised to the brow"
+    },
+    {
+      "id": "ily",
+      "name": "ILY",
+      "type": "single_hand",
+      "origin": "research",
+      "description": "ILY sign combines the letters 'I', 'L', and 'Y' from American Sign Language by extending the thumb, index finger, and little finger while the middle and ring finger touch the palm.",
+      "display": "card",
+      "status": "active",
+      "detector": {
+        "kind": "spec",
+        "fingers": {
+          "thumb": "ext",
+          "index": "ext",
+          "pinky": "ext",
+          "middle": "curl",
+          "ring": "curl"
+        },
+        "overrides": [
+          "Rock"
+        ]
+      },
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/List_of_gestures",
+          "retrieved": "2026-07-06"
+        }
+      ],
+      "notes": "auto-extracted (confidence 3)"
+    },
+    {
+      "id": "vulcan-salute",
+      "name": "Vulcan Salute",
+      "type": "single_hand",
+      "origin": "research",
+      "description": "ca, Australia, New Zealand and Ireland. Vulcan salute was used in the television program Star Trek. It consists of all fingers raised and parted between the ring and middle fingers with the thumb sticking out to t",
+      "display": "card",
+      "status": "active",
+      "detector": {
+        "kind": "spec",
+        "fingers": {
+          "thumb": "any",
+          "index": "ext",
+          "middle": "ext",
+          "ring": "ext",
+          "pinky": "ext"
+        },
+        "overrides": [
+          "Open Palm",
+          "Salute"
+        ],
+        "spread": {
+          "pair": [
+            "middle",
+            "ring"
+          ],
+          "min_ratio": 1.7
+        }
+      },
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/List_of_gestures",
+          "retrieved": "2026-07-06"
+        }
+      ],
+      "notes": "expressible since the spread primitive: V split between middle and ring fingers"
+    },
+    {
+      "id": "french-salute",
+      "name": "French Salute",
+      "type": "face_hand",
+      "origin": "research",
+      "description": "The French salute is performed with a flat hand, palm facing forwards; the upper arm is horizontal and the tips of the fingers come near the corner of the eyes.",
+      "display": "card",
+      "status": "active",
+      "detector": {
+        "kind": "spec",
+        "fingers": {
+          "index": "ext",
+          "middle": "ext",
+          "ring": "ext",
+          "pinky": "ext",
+          "thumb": "any"
+        },
+        "face_relation": {
+          "region": "face",
+          "max_dist": 1.4
+        },
+        "overrides": [
+          "Salute"
+        ],
+        "palm": "toward"
+      },
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/Salute",
+          "retrieved": "2026-07-07"
+        }
+      ],
+      "notes": "auto-extracted (confidence 3)"
+    },
+    {
+      "id": "asl-hello",
+      "name": "HELLO",
+      "type": "word_sign",
+      "origin": "builtin",
+      "language": "ASL",
+      "culture": "American Sign Language",
+      "description": "Flat hand at the forehead (salute), then swept outward.",
+      "display": "card",
+      "status": "active",
+      "detector": {
+        "kind": "sequence",
+        "hands": 1,
+        "window": 45,
+        "phases": [
+          {
+            "fingers": {
+              "index": "ext",
+              "middle": "ext",
+              "ring": "ext",
+              "pinky": "ext"
+            },
+            "region": "forehead",
+            "max_dist": 0.8
+          },
+          {
+            "fingers": {
+              "index": "ext",
+              "middle": "ext",
+              "ring": "ext",
+              "pinky": "ext"
+            },
+            "move": "out"
+          }
+        ]
+      },
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/American_Sign_Language"
+        }
+      ]
+    },
+    {
+      "id": "asl-thank-you",
+      "name": "THANK YOU",
+      "type": "word_sign",
+      "origin": "builtin",
+      "language": "ASL",
+      "culture": "American Sign Language",
+      "description": "Flat hand at the chin/lips, then moved outward and down.",
+      "display": "card",
+      "status": "active",
+      "detector": {
+        "kind": "sequence",
+        "hands": 1,
+        "window": 45,
+        "phases": [
+          {
+            "fingers": {
+              "index": "ext",
+              "middle": "ext",
+              "ring": "ext",
+              "pinky": "ext"
+            },
+            "region": "chin",
+            "max_dist": 0.7
+          },
+          {
+            "fingers": {
+              "index": "ext",
+              "middle": "ext",
+              "ring": "ext",
+              "pinky": "ext"
+            },
+            "move": "down"
+          }
+        ]
+      },
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/American_Sign_Language"
+        }
+      ]
+    },
+    {
+      "id": "tid-merhaba",
+      "name": "MERHABA",
+      "display_name": "MERHABA",
+      "type": "word_sign",
+      "origin": "builtin",
+      "language": "TID",
+      "culture": "Turkish Sign Language (Turk Isaret Dili)",
+      "description": "TID greeting: flat hand raised to the temple/forehead then moved outward (salute-like). Approximate form - refine via research.",
+      "display": "card",
+      "status": "active",
+      "detector": {
+        "kind": "sequence",
+        "hands": 1,
+        "window": 45,
+        "phases": [
+          {
+            "fingers": {
+              "index": "ext",
+              "middle": "ext",
+              "ring": "ext",
+              "pinky": "ext"
+            },
+            "region": "forehead",
+            "max_dist": 0.9
+          },
+          {
+            "fingers": {
+              "index": "ext",
+              "middle": "ext",
+              "ring": "ext",
+              "pinky": "ext"
+            },
+            "move": "out"
+          }
+        ]
+      },
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/Turkish_Sign_Language",
+          "note": "approximate; grow/refine via --auto research"
+        }
+      ]
+    },
+    {
+      "id": "tid-tesekkur",
+      "name": "TESEKKUR",
+      "display_name": "TEŞEKKÜR",
+      "type": "word_sign",
+      "origin": "builtin",
+      "language": "TID",
+      "culture": "Turkish Sign Language (Turk Isaret Dili)",
+      "description": "TID 'thank you': flat hand at the chin moved forward and down. Approximate form - refine via research.",
+      "display": "card",
+      "status": "active",
+      "detector": {
+        "kind": "sequence",
+        "hands": 1,
+        "window": 45,
+        "phases": [
+          {
+            "fingers": {
+              "index": "ext",
+              "middle": "ext",
+              "ring": "ext",
+              "pinky": "ext"
+            },
+            "region": "chin",
+            "max_dist": 0.7
+          },
+          {
+            "fingers": {
+              "index": "ext",
+              "middle": "ext",
+              "ring": "ext",
+              "pinky": "ext"
+            },
+            "move": "down"
+          }
+        ]
+      },
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/Turkish_Sign_Language",
+          "note": "approximate; grow/refine via --auto research"
+        }
+      ]
+    },
+    {
+      "id": "asl-please",
+      "name": "PLEASE",
+      "type": "word_sign",
+      "origin": "builtin",
+      "language": "ASL",
+      "culture": "American Sign Language",
+      "description": "Flat hand circling on the chest.",
+      "display": "card",
+      "status": "active",
+      "detector": {
+        "kind": "sequence",
+        "hands": 1,
+        "window": 45,
+        "phases": [
+          {
+            "fingers": {
+              "index": "ext",
+              "middle": "ext",
+              "ring": "ext",
+              "pinky": "ext"
+            },
+            "region": "chest",
+            "max_dist": 1.6,
+            "motion": "circle"
+          }
+        ]
+      },
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/American_Sign_Language",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "asl-sorry",
+      "name": "SORRY",
+      "type": "word_sign",
+      "origin": "builtin",
+      "language": "ASL",
+      "culture": "American Sign Language",
+      "description": "Fist circling on the chest.",
+      "display": "card",
+      "status": "active",
+      "detector": {
+        "kind": "sequence",
+        "hands": 1,
+        "window": 45,
+        "phases": [
+          {
+            "fingers": {
+              "index": "curl",
+              "middle": "curl",
+              "ring": "curl",
+              "pinky": "curl",
+              "thumb": "curl"
+            },
+            "region": "chest",
+            "max_dist": 1.6,
+            "motion": "circle"
+          }
+        ]
+      },
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/American_Sign_Language",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "asl-yes",
+      "name": "YES",
+      "type": "word_sign",
+      "origin": "builtin",
+      "language": "ASL",
+      "culture": "American Sign Language",
+      "description": "Fist nodding up and down (like a nodding head).",
+      "display": "card",
+      "status": "active",
+      "detector": {
+        "kind": "sequence",
+        "hands": 1,
+        "window": 45,
+        "phases": [
+          {
+            "fingers": {
+              "index": "curl",
+              "middle": "curl",
+              "ring": "curl",
+              "pinky": "curl",
+              "thumb": "curl"
+            },
+            "motion": "nod"
+          }
+        ]
+      },
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/American_Sign_Language",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "asl-no",
+      "name": "NO",
+      "type": "word_sign",
+      "origin": "builtin",
+      "language": "ASL",
+      "culture": "American Sign Language",
+      "description": "Index and middle fingers snapping to the thumb - shaken side to side (approximate).",
+      "display": "card",
+      "status": "active",
+      "detector": {
+        "kind": "sequence",
+        "hands": 1,
+        "window": 45,
+        "phases": [
+          {
+            "fingers": {
+              "index": "ext",
+              "middle": "ext",
+              "ring": "curl",
+              "pinky": "curl"
+            },
+            "motion": "shake"
+          }
+        ]
+      },
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/American_Sign_Language",
+          "note": "approximate; refine via --auto research"
+        }
+      ]
+    },
+    {
+      "id": "tid-evet",
+      "name": "EVET",
+      "type": "word_sign",
+      "origin": "builtin",
+      "language": "TID",
+      "culture": "Turkish Sign Language",
+      "description": "TID 'yes': nodding fist. Approximate - refine via research.",
+      "display": "card",
+      "status": "active",
+      "detector": {
+        "kind": "sequence",
+        "hands": 1,
+        "window": 45,
+        "phases": [
+          {
+            "fingers": {
+              "index": "curl",
+              "middle": "curl",
+              "ring": "curl",
+              "pinky": "curl",
+              "thumb": "curl"
+            },
+            "motion": "nod"
+          }
+        ]
+      },
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/Turkish_Sign_Language",
+          "note": "approximate; refine via --auto research"
+        }
+      ],
+      "display_name": "EVET"
+    },
+    {
+      "id": "tid-hayir",
+      "name": "HAYIR",
+      "type": "word_sign",
+      "origin": "builtin",
+      "language": "TID",
+      "culture": "Turkish Sign Language",
+      "description": "TID 'no': two fingers shaken side to side. Approximate - refine via research.",
+      "display": "card",
+      "status": "active",
+      "detector": {
+        "kind": "sequence",
+        "hands": 1,
+        "window": 45,
+        "phases": [
+          {
+            "fingers": {
+              "index": "ext",
+              "middle": "ext",
+              "ring": "curl",
+              "pinky": "curl"
+            },
+            "motion": "shake"
+          }
+        ]
+      },
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/Turkish_Sign_Language",
+          "note": "approximate; refine via --auto research"
+        }
+      ],
+      "display_name": "HAYIR"
+    }
+  ]
+}

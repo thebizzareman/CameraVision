@@ -1,0 +1,6 @@
+# CameraVision runtime dependencies (install into venv):
+#   venv\Scripts\pip install -r requirements.txt
+opencv-python>=4.10
+numpy>=1.26
+mediapipe>=0.10
+Pillow>=10.0
